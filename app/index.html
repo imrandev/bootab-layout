@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BootabLayout</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="app.css">
+
+    <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="app.js"></script>
+    <script src="directive/bootab-layout.js"></script>
+</head>
+<body>
+
+<div class="container" ng-controller="IndexCtrl">
+
+    <div class="card shadow m-5">
+
+        <div class="card-header">
+            <label>BootabLayout : Create dynamic tab with bootstrap using directive in AngularJS</label>
+        </div>
+
+        <div class="card-body">
+            <tab-layout controllers="['photosCtrl', 'videosCtrl']"
+                        columns="['Photos ', 'Videos']"
+                        selected-index="selectedTabIndex"
+                        container-url="templates/template-tab-layout.xhtml"
+                        icons="['photo_camera', 'movie']"
+                        fragments="['templates/template-photos.xhtml', 'templates/template-videos.xhtml']"/>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

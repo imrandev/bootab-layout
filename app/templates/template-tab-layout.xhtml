@@ -1,0 +1,9 @@
+<div class="col-md-12 no-padding min-height--100vh">
+    <ul class="nav nav-tabs" ng-class="alignment === 'center' ? 'flex--justify-center' : alignment === 'end' ? 'flex--justify-end' : ''">
+        <li class="nav-item" ng-repeat="column in columns track by $index" >
+            <a id="{{'tab' + $index}}" class="nav-link flex--align-center" ng-class="$index == selectedIndex ? 'active' : ''" href="#" ng-click="toggleTab($index)"><i class="material-icons" style="margin-right: 5px;">{{icons[$index]}}</i>{{column}}</a>
+        </li>
+    </ul>
+
+    <tab-container ng-if="$index === selectedIndex" ng-repeat="fragment in fragments track by $index" template-url="{{fragment}}" ctrl="controllers[$index]"/>
+</div>

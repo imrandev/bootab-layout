@@ -1,0 +1,88 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.flex--align-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex--align-center {
+  display: flex !important;
+  align-items: center;
+}
+
+.flex--align-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+.flex--justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex--justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex--justify-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flex-wrap--wrap {
+  display: flex;
+  flex-wrap: wrap !important;
+}
+
+.flex-flow--column-wrap {
+  display: flex;
+  flex-flow: column wrap !important;
+}
+
+.flex-justify--space-between {
+  display: flex;
+  justify-content: space-between !important;
+}
+
+.flex-justify--space-around {
+  display: flex;
+  justify-content: space-around !important;
+}
+
+.flex-justify--space-evenly {
+  display: flex;
+  justify-content: space-evenly !important;
+}
+
+.min-height--100vh {
+  min-height: 100vh !important;
+}
+
+.height-per--100 {
+  height: 100% !important;
+}
